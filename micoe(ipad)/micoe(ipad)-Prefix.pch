@@ -1,0 +1,42 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+#import "UIViewExt.h"
+#import "UIUtils.h"
+#import "RbtWebManager.h"
+#import "RbtCommonTool.h"
+#import "RbtUserModel.h"
+#import "RbtProjectModel.h"
+#import "RbtCommonModel.h"
+#import "MBProgressHUD.h"
+#import "RbtProjectInfoModel.h"
+
+//判断是否是iphone5
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+
+//获取设备的物理高度
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+
+//获取设备的物理宽度
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+
+//字体
+#define kFontName @"HelveticaNeue-UltraLight"
+//
+//WebserviceUrl192.168.100.110
+#define kWebserviceUrl @"115.29.160.36"
+#define kWebservicePort @"8080"
